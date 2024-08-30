@@ -1,0 +1,14 @@
+.vscode/
+Enlace.txt
+*.zip
+.DS_STORE
+*.gas
+__MACOSX/
+.history/
+.settings/
+bin/
+.metadata/
+*.class
+*.history
+docs/
+eclipse_workspace/
