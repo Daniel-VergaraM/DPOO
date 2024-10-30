@@ -1,0 +1,8 @@
+Cliente: Cliente1
+Dirección: Dirección1
+----------------
+uniandes.dpoo.hamburguesas.mundo.ProductoMenu@906d29b            20000
+----------------
+Precio Neto:  20000
+IVA:          3800
+Precio Total: 23800
