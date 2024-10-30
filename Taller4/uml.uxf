@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>495</x>
+      <y>187</y>
+      <w>220</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Empleado
+--
+- id: int
+- correoElectronico: String
+- contrasena: String
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>462</x>
+      <y>0</y>
+      <w>286</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>Cliente
+--
+- id: int
+- correoElectronico: String
+- contrasena: String
+- historialCompras: Lista de Compras
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>814</x>
+      <y>176</y>
+      <w>220</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>ProgramaLealtad
+--
+- puntosAcumulados: int
+- nivelMembresia: String
+- descuentoAplicado: float</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>132</y>
+      <w>253</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>Compra
+--
+- id: int
+- monto: float
+- cliente: Cliente
+- function: Funcion
+- asientos: Lista de Asientos</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>242</x>
+      <y>264</y>
+      <w>165</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+- pagoRealizado &gt;
+layer=3</panel_attributes>
+    <additional_attributes>10.0;120.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>374</y>
+      <w>154</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Funcion
+--
+- fecha: Date
+- hora: String
+- pelicula: Pelicula
+- sala: Sala
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>396</y>
+      <w>253</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Pago
+--
+- metodoPago: String
+- monto: float
+- fechaTransaccion: Date
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>297</x>
+      <y>858</y>
+      <w>132</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Asiento
+--
+- numero: int
+- fila: int
+- tipo: String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>110</x>
+      <y>572</y>
+      <w>264</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Pelicula
+--
+- *title: String
+- *genero: String
+- *duracionMinutos: int
+- clasificacionEdad: String
+- fechaEstreno: Date
+- director: String
+- actoresPrincipales: Lista de String
+- tematica: String
+- narrador: String
+- tecnicaAnimacion: String</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>616</x>
+      <y>561</y>
+      <w>209</w>
+      <h>110</h>
+    </coordinates>
+    <panel_attributes>Sala
+--
+- numero: int
+- capacidad: int
+- tecnologia: String
+- asientos: Lista de Asientos</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>814</x>
+      <y>363</y>
+      <w>176</w>
+      <h>88</h>
+    </coordinates>
+    <panel_attributes>Cine
+--
+- numero: int
+- direccion: String
+- salas: Lista de Salas</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>44</y>
+      <w>132</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+layer=3</panel_attributes>
+    <additional_attributes>10.0;120.0;50.0;120.0;50.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>352</x>
+      <y>209</y>
+      <w>132</w>
+      <h>253</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+Tiene &gt;
+layer=3</panel_attributes>
+    <additional_attributes>80.0;200.0;50.0;200.0;50.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>550</x>
+      <y>264</y>
+      <w>110</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+Gestiona &gt;
+layer=3</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>363</x>
+      <y>473</y>
+      <w>187</w>
+      <h>242</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+Tiene &gt;
+layer=3</panel_attributes>
+    <additional_attributes>10.0;190.0;100.0;190.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>814</x>
+      <y>440</y>
+      <w>154</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+Posee &gt;
+layer=3</panel_attributes>
+    <additional_attributes>10.0;160.0;70.0;160.0;70.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>0</x>
+      <y>165</y>
+      <w>319</w>
+      <h>748</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+Contiene &gt;
+layer=3</panel_attributes>
+    <additional_attributes>270.0;650.0;10.0;650.0;10.0;10.0;100.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>418</x>
+      <y>660</y>
+      <w>319</w>
+      <h>253</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+Posee &gt;
+layer=3</panel_attributes>
+    <additional_attributes>10.0;200.0;260.0;200.0;260.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>737</x>
+      <y>44</y>
+      <w>220</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+- membresia &gt;
+layer=3</panel_attributes>
+    <additional_attributes>160.0;120.0;160.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>583</x>
+      <y>418</y>
+      <w>220</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1
+Tiene &gt;
+layer=3</panel_attributes>
+    <additional_attributes>130.0;130.0;130.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+</diagram>
